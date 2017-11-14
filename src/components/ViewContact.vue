@@ -6,9 +6,9 @@
     <div class="contact--section">
       <p class="__name">{{firstname}} {{lastname}}</p>
 
-      <p class="__email">{{emailaddress}}</p>
+      <p>{{emailaddress}}</p>
 
-      <p class="__phonenumber">{{phonenumber}}</p>
+      <p>{{phonenumber}}</p>
 
     </div>
   </section>

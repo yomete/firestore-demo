@@ -1,5 +1,4 @@
 <template>
-
   <section class="container">
     <div class="columns">
       <div class="column is-8">
@@ -95,11 +94,9 @@
       }
     },
     created () {
-      let self = this
-      db.collection('contacts').get().then(function (querySnapshot) {
-        self.loading = false
-        querySnapshot.forEach(function (doc) {
-          console.log(doc.id, ' => ', doc.data())
+      db.collection('contacts').get().then((querySnapshot) => {
+        this.loading = false
+        querySnapshot.forEach((doc) => {
           let data = {
             'id': doc.id,
             'firstname': doc.data().firstname,
@@ -108,7 +105,7 @@
             'phonenumber': doc.data().phonenumber,
             'slug': doc.data().slug
           }
-          self.contacts.push(data)
+          this.contacts.push(data)
         })
       })
     }
