@@ -20,7 +20,7 @@ export default new Router({
     },
     {
       path: '/:person',
-      name: 'contacts',
+      name: 'view-contact',
       component: ViewContact
     }
   ]

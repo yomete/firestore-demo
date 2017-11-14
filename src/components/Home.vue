@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="column is-4 right">
-              <router-link class="button is-primary" v-bind:to="{ name: 'contacts', params: { person: person.slug }}">View Person</router-link>
+              <router-link class="button is-primary" v-bind:to="{ name: 'view-contact', params: { person: person.slug }}">View Person</router-link>
             </div>
           </div>
         </div>
