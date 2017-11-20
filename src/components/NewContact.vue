@@ -69,7 +69,7 @@
           })
             .then(docRef => {
               console.log('Document written with ID: ', docRef.id)
-              this.$router.push(`/${slug}`)
+              this.$router.push(`/${slug}/success`)
             })
             .catch(function (error) {
               console.error('Error adding document: ', error)

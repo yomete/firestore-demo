@@ -3,6 +3,8 @@
 
     <h1>View Contact</h1>
 
+    <div class="notification is-success" v-if="success">Contact successfully saved!</div>
+
     <div class="contact--section">
       <p class="__name">{{firstname}} {{lastname}}</p>
 
@@ -23,7 +25,8 @@
         firstname: null,
         lastname: null,
         emailaddress: null,
-        phonenumber: null
+        phonenumber: null,
+        success: (this.$route.params.success)
       }
     },
     beforeRouteEnter (to, from, next) {
@@ -50,6 +53,7 @@
             this.lastname = doc.data().lastname
             this.emailaddress = doc.data().emailaddress
             this.phonenumber = doc.data().phonenumber
+            this.success = this.$route.params.success
           })
         })
       }

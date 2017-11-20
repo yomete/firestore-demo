@@ -19,7 +19,7 @@ export default new Router({
       component: NewContact
     },
     {
-      path: '/:person',
+      path: '/:person/:success?',
       name: 'view-contact',
       component: ViewContact
     }
