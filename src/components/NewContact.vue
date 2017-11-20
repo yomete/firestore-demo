@@ -58,15 +58,18 @@
       },
       methods: {
         saveContact () {
+          const slug = this.generateUUID()
+
           db.collection('contacts').add({
             firstname: this.firstname,
             lastname: this.lastname,
             emailaddress: this.emailaddress,
             phonenumber: this.phonenumber,
-            slug: this.generateUUID()
+            slug: slug
           })
-            .then(function (docRef) {
+            .then(docRef => {
               console.log('Document written with ID: ', docRef.id)
+              this.$router.push(`/${slug}`)
             })
             .catch(function (error) {
               console.error('Error adding document: ', error)
