@@ -34,6 +34,9 @@ export default {
     background: #4285f4;
     color: white;
   }
+  .navbar-item, .navbar-link {
+    color: white;
+  }
   a {
     color: white;
   }
